@@ -1,5 +1,5 @@
 ---
-title:  "Manage dev/prod config in Python"
+title:  "Manage dev/prod config in pure Python"
 date:   2020-12-12 19:00:40 +0330
 tags:
   - deployment
