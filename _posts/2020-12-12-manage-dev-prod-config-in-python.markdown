@@ -15,31 +15,40 @@ I'd like to separate dev/test/prod environments :) so let's see the real example
 Developers, DevOps Engineers, and SysAdmins.
 
 ### Challenges
-- put configs in a simple format (JSON, YAML, ...)
-- hide unnecessary config information from other envs
+- Put configs in a simple format (JSON, YAML, ...)
+- Hide unnecessary config information from other envs
 
 ### Solution
-I will put my configs in "etc" folder in the root of the project then specify the current env inside "config.yml", this is my config.yml file content:
+I will put my configs in "etc" folder in the root of the project:
 {% highlight yaml %}
+├── config-dev.yml
+├── config-prod.yml
+└── config.yml
+{% endhighlight %}
+
+ then specify the current env inside "config.yml", this is my config.yml file content:
+{% highlight yaml %}
+# config.yml
 profiles:
     active: dev
 {% endhighlight %}
 
 And this is my "config-dev.yml" file which I want to read the redis configuration from:
 {% highlight yaml %}
+# config-dev.yml
 redis:
     host: localhost
     port: 6379
     history-sub: history-subscriber
 {% endhighlight %}
 
-It's time to read these values inside python, this is my "config.py":
+It's time to read these values inside python, this is my "config.py" file:
 {% highlight python %}
+# config.py
 from loguru import logger
 
 get = None
 CONFIG_PATH_FROMAT = 'etc/config%s.yml'
-
 
 def load():
     logger.add("logs/app.log", rotation="10 MB", compression="zip", level="INFO")
@@ -62,8 +71,9 @@ def load_config(active_profile):
 {% endhighlight %}
 
 
-Now we can need to load out config code once then use it anywhere we like, add these lines to you main module:
+Now we need to load our config loader once then use it anywhere we like, add these lines to you main module:
 {% highlight python %}
+# main.py
 from config import config
 
 def main():
@@ -75,3 +85,5 @@ def main():
 if __name__ == "__main__":
     main()
 {% endhighlight %}
+
+The only issue is that you can not change the the structure of "config.yml", and the other files structures just depend on you.
