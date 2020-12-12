@@ -11,7 +11,7 @@ header:
 toc: true
 last_modified_at: 2020-12-12T19:00:40-03:30
 ---
-I'd like to separate dev/test/prod environments :) so let's see the real example:
+I'd like to separate dev/test/prod environments :) so let's see the real example.
 
 ### Audience
 Developers, DevOps Engineers, and SysAdmins.
@@ -20,7 +20,7 @@ Developers, DevOps Engineers, and SysAdmins.
 - Put configs in a simple format (JSON, YAML, ...)
 - Hide unnecessary config information from other envs
 
-### Solution
+### Structure
 I will put my configs in "etc" folder in the root of the project:
 {% highlight yaml %}
 ├── config-dev.yml
@@ -28,6 +28,7 @@ I will put my configs in "etc" folder in the root of the project:
 └── config.yml
 {% endhighlight %}
 
+### config.yml
 Then specify the current env inside "config.yml", this is my config.yml file content:
 {% highlight yaml %}
 # config.yml
@@ -35,6 +36,7 @@ profiles:
     active: dev
 {% endhighlight %}
 
+### config-dev.yml
 Now I want to read the redis configuration from "config-dev.yml":
 {% highlight yaml %}
 # config-dev.yml
@@ -44,6 +46,7 @@ redis:
     history-sub: history-subscriber
 {% endhighlight %}
 
+### config.py
 It's time to read these values inside python, this is my "config.py" file:
 {% highlight python %}
 # config.py
@@ -72,7 +75,7 @@ def load_config(active_profile):
         return CONFIG_PATH_FROMAT % ('-' + active_profile)
 {% endhighlight %}
 
-
+### main.py
 Now we need to load our config loader once then use it anywhere we like, add these lines to you main module:
 {% highlight python %}
 # main.py
@@ -88,4 +91,5 @@ if __name__ == "__main__":
     main()
 {% endhighlight %}
 
+### the final word
 The only issue is that you can not change the structure of "config.yml", and the other files structures just depend on you.
