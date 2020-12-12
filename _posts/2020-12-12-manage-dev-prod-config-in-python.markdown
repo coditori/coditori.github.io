@@ -6,6 +6,8 @@ tags:
   - python
   - ci
   - cd
+header:
+  image: /assets/images/header/dev-prod-config-in-python.png
 toc: true
 last_modified_at: 2020-12-12T19:00:40-03:30
 ---
