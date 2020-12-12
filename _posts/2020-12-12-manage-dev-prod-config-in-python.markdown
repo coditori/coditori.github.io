@@ -26,14 +26,14 @@ I will put my configs in "etc" folder in the root of the project:
 └── config.yml
 {% endhighlight %}
 
- then specify the current env inside "config.yml", this is my config.yml file content:
+Then specify the current env inside "config.yml", this is my config.yml file content:
 {% highlight yaml %}
 # config.yml
 profiles:
     active: dev
 {% endhighlight %}
 
-And this is my "config-dev.yml" file which I want to read the redis configuration from:
+Now I want to read the redis configuration from "config-dev.yml":
 {% highlight yaml %}
 # config-dev.yml
 redis:
@@ -86,4 +86,4 @@ if __name__ == "__main__":
     main()
 {% endhighlight %}
 
-The only issue is that you can not change the the structure of "config.yml", and the other files structures just depend on you.
+The only issue is that you can not change the structure of "config.yml", and the other files structures just depend on you.
