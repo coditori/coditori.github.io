@@ -91,5 +91,5 @@ if __name__ == "__main__":
     main()
 {% endhighlight %}
 
-### the final word
+### The final word
 The only issue is that you can not change the structure of "config.yml", and the other files structures just depend on you.
