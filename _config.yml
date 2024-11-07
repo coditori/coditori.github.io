@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "coditori"
+title                    : "Ario Afrashteh"
 title_separator          : "-"
-name                     : "Massoud Afrashteh"
-description              : "Sharing Software Development Tips and Experiences, by Massoud Afrashteh (coditori)."
+name                     : "Ario Afrashteh"
+description              : "Sharing Software Development Tips and Experiences, by Ario Afrashteh (coditori)."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Massoud Afrashteh"
+  name             : "Ario Afrashteh"
   avatar           : "/assets/images/bio/massoud-afrashteh-110.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Java, Python, Data Science lover"
   location         : "Tehran"
