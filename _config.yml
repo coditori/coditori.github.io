@@ -108,13 +108,13 @@ analytics:
 author:
   name             : "Ario Afrashteh"
   avatar           : "/assets/images/bio/massoud-afrashteh-110.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Java, Python, Data Science lover"
-  location         : "Tehran"
+  bio              : "Passionate software engineer focused on creating high-performance, scalable systems. With expertise in Java, API design, and a keen interest in AI and large language models, I’m dedicated to exploring how cutting-edge technologies can drive innovation in software."
+  location         : "Amsterdam"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/coditori"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -134,9 +134,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/coditori"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
